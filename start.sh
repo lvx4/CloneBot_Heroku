@@ -7,4 +7,5 @@ gclone_para_override = $gclone_para_override" >> "telegram_gcloner/config.ini"
 npm install http-server -g
 http-server -p $PORT &
 python3 telegram_gcloner/telegram_gcloner.py
-apt install -y tcl
+DEBIAN_FRONTEND=noninteractive
+RUN apt update && apt install -y tcl
